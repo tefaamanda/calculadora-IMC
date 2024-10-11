@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="assets/css/calculadora.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="logo" src="assets/img/logo.png" alt="Logo do site.">
+        </a>
+        <nav>
+            <div>
+                <a class="calculadora-nav" href="index.html">
+                    CALCULADORA
+                </a>
+            </div>
+        </nav>
+    </header>
+    <h1>
+        Calculadora de IMC
+    </h1>
+    <section>
+        <h2>Como funciona</h2>
+        <p>O Índice de Massa Corporal (IMC) é uma medida que 
+            relaciona o peso e a altura de uma pessoa. Ele 
+            é amplamente utilizado como uma ferramenta simples 
+            para identificar possíveis problemas de peso em 
+            adultos, como sobrepeso ou obesidade.
+        </br></br>
+            O IMC fornece uma estimativa da gordura corporal 
+            de uma pessoa e ajuda a avaliar se o peso está 
+            dentro de faixas consideradas saudáveis. No entanto, 
+            ele não leva em consideração outros fatores 
+            importantes, como a composição corporal (por exemplo, 
+            a proporção de massa muscular versus gordura) e a 
+            distribuição de gordura no corpo. Por exemplo, uma 
+            pessoa musculosa pode ter um IMC alto, mas não 
+            necessariamente estar acima do peso.</p>
+    </section>
+    <section class="formulario">
+        <form>
+            <label>Peso (KG)</label>
+            <input type="number" required id="pesoInserido" placeholder="Insira seu peso (em kg)">
+
+            <label>Altura (M)</label>
+            <input type="number" required id="alturaInserida" placeholder="Insira sua altura (em m)">
+
+            <button type="button" id="botaoCalcular">CALCULAR IMC</button>
+        </form>
+    </section>
+    <h3 class="resultado" id="resultado">
+        
+    </h3>
+
+    <script>
+        function calculoIMC() {
+            var resultado = document.getElementById("resultado")
+            var pesoValor = parseFloat(document.getElementById("pesoInserido").value)
+            var alturaValor = parseFloat(document.getElementById("alturaInserida").value)
+            var calculo = pesoValor / (alturaValor * alturaValor)
+            if (calculo < 18.5) {
+                resultado.textContent = "Abaixo do peso."
+            }
+            else if (calculo >= 18.5 && calculo <= 24.9){
+                resultado.textContent = "Peso normal."
+            }
+            else if (calculo >= 25 && calculo <= 29.9){
+                resultado.textContent = "Sobrepeso."
+            }
+            else{
+                resultado.textContent = "Obesidade."
+            }
+        }   
+         
+        var botao = document.getElementById("botaoCalcular") 
+        botao.addEventListener('click', calculoIMC) 
+    </script>
+    <footer>
+        <img class="logo-rodape" src="assets/img/logo.png" alt="Logo do site.">
+        <p>© 2024. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

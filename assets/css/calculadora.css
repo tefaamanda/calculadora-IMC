@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --logo1: #5ce1e6;
+    --logo2: #0cc0df;
+    --background1: #f2f2f2;
+    --background2: #ffffff;
+}
+
+header {
+    display: flex;
+    background-color: var(--background2);
+    box-shadow: 15px 15px 15px 15px #ebeaea;
+}
+
+.logo {
+    width: 70px;
+    padding: 20px;
+}
+
+nav {
+    padding: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    padding-left: 920px;
+}
+
+.calculadora-nav {
+    color: var(--logo2);
+}
+
+.calculadora-nav:hover {
+    color: var(--logo1);
+}
+
+body {
+    background-color: var(--background1);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
+    color: #0cc0df;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+    color: #0cc0df;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-weight: bold;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: #595b5b;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--background2);
+    background-color: var(--logo1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-color: var(--logo1);
+}
+
+button:hover {
+    border-color: var(--background2);
+    background-color: var(--background2);
+    color: var(--logo1);
+}
+
+footer {
+    background: var(--background2);
+    box-shadow: 15px 15px 15px 15px #ebeaea;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #595b5b;
+}
+
+.logo-rodape {
+    width: 70px;
+    padding-left: 47%;
+    padding-top: 20px;
+}
+
+input {
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.resultado {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #595b5b;
+    padding-bottom: 20px;
+}
